@@ -1,4 +1,8 @@
 require_relative "./config/environment"
+require_relative "./app/controllers/application_controller"
+require_relative "./app/controllers/items_controller"
+require_relative "./app/controllers/reviews_controller"
+require_relative "./app/controllers/users_controller"
 
 # Allow CORS (Cross-Origin Resource Sharing) requests
 use Rack::Cors do
@@ -13,3 +17,6 @@ use Rack::JSONBodyParser
 
 # Our application
 run ApplicationController
+use ItemsController
+use ReviewsController
+use UsersController
