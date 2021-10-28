@@ -8,4 +8,11 @@ class ReviewsController < Sinatra::Base
         reviews.to_json
     end
 
+    # retrieving one particular review
+    get "/reviews/:id" do
+        review = Review.find(params[:id])
+        review.to_json
+    end
+
+
 end

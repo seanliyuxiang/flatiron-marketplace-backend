@@ -9,4 +9,10 @@ class UsersController < Sinatra::Base
         users.to_json
     end
 
+    # retrieving one particular user
+    get "/users/:id" do
+        user = User.find(params[:id])
+        user.to_json
+    end
+
 end
