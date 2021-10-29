@@ -2,19 +2,19 @@ class ReviewsController < Sinatra::Base
     # Add this line to set the Content-Type header for all responses
     set :default_content_type, 'application/json'
 
-    # retreiving all reviews
+    # Retreiving all reviews
     get "/reviews" do
         reviews = Review.all
         reviews.to_json
     end
 
-    # retrieving one particular review
+    # Retrieving one particular review by ID number
     get "/reviews/:id" do
         review = Review.find(params[:id])
         review.to_json
     end
 
-    # post a new review
+    # Post a new review
     post "/reviews" do
         review = Review.create(
             body: params[:body],
@@ -25,7 +25,7 @@ class ReviewsController < Sinatra::Base
         review.to_json
     end
 
-    # delete an existing review
+    # Delete an existing review by ID number
     delete "/reviews/:id" do
         review = Review.find(params[:id])
         review.destroy
