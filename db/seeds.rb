@@ -32,7 +32,7 @@ puts "🌱 Seeding reviews..."
         2.times do
             review = Review.create(
                 body: Faker::Lorem.paragraph(sentence_count: 3),
-                rating: Faker::Number.between(from: 0, to: 10),
+                rating: Faker::Number.between(from: 0, to: 5),
                 item_id: item.id,
                 reviewer_id: user.id
             )
