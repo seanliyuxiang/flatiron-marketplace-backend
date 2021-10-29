@@ -8,12 +8,18 @@ class ItemsController < Sinatra::Base
         items = Item.all
         items.to_json
     end
+    
+    get "/items/:id/reviews" do
+        reviews = Item.find(params[:id]).reviews
+        reviews.to_json
+    end
 
     # get a specific item by id
     get "/items/:id" do
         item = Item.find(params[:id])
         item.to_json
     end
+
 
     # to add a new item
     post "/items" do
