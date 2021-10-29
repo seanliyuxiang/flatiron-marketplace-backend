@@ -1,3 +1,17 @@
+# Project Contributors
+Abby, Gabriel, and Sean
+
+## To get this up and running in the backend, run:
+bundle install
+rake db:reset (which will drop, migrate, and then seed db)
+rake server
+
+## To get the frontend server going, run:
+npm install
+npm start
+
+### The below text comes from Canvas
+
 # Phase 3 Project Guidelines
 
 ## Learning Goals
@@ -116,5 +130,3 @@ fetch("http://localhost:9292/test")
 [dbdiagram.io]: https://dbdiagram.io/
 [postman download]: https://www.postman.com/downloads/
 [network tab]: https://developer.chrome.com/docs/devtools/network/
-
-Abby, Gabriel, and Sean
