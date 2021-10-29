@@ -21,7 +21,7 @@ puts "🌱 Seeding reviews..."
     5.times do
         item = Item.create(
             name: Faker::Commerce.product_name,
-            description: Faker::Lorem.sentences(number: 2),
+            description: Faker::Lorem.paragraph(sentence_count: 2),
             price: Faker::Commerce.price,
             image_url: "https://loremflickr.com/#{rand(150..200)}/#{rand(150..200)}/all",
             # Faker::LoremFlickr.image(size: "200x300"),
@@ -31,7 +31,7 @@ puts "🌱 Seeding reviews..."
         # for each item, create 2 random reviews
         2.times do
             review = Review.create(
-                body: Faker::Lorem.sentences(number: 3),
+                body: Faker::Lorem.paragraph(sentence_count: 3),
                 rating: Faker::Number.between(from: 0, to: 10),
                 item_id: item.id,
                 reviewer_id: user.id

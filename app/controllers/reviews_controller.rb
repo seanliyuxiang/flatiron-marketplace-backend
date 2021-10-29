@@ -14,5 +14,23 @@ class ReviewsController < Sinatra::Base
         review.to_json
     end
 
+    # post a new review
+    post "/reviews" do
+        review = Review.create(
+            body: params[:body],
+            rating: params[:rating],
+            item_id: params[:item_id],
+            reviewer_id: params[:reviewer_id]
+        )
+        review.to_json
+    end
+
+    # delete an existing review
+    delete "/reviews/:id" do
+        review = Review.find(params[:id])
+        review.destroy
+    end
+
+
 
 end
