@@ -6,6 +6,9 @@ bundle install
 rake db:reset (which will drop, migrate, and then seed db)
 rake server
 
+## GitHub URL to the frontend repo of this app:
+https://github.com/seanliyuxiang/flatiron-marketplace-frontend
+
 ## To get the frontend server going, run:
 npm install
 npm start
